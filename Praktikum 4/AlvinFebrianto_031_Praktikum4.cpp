@@ -11,7 +11,6 @@ int main() {
 	node *t;
 	node *h;
 	node *bantu;
-	node *hapus;
 	
 	n=new node;
 	n->data=2;
@@ -20,7 +19,6 @@ int main() {
 	
 	n=new node;
 	n->data=5;
-	
 	t->next=n;
 	t=t->next;
 	
@@ -34,10 +32,6 @@ int main() {
 	n->data=7;
 	t->next=n;
 	n->next=bantu;
-	
-	hapus=h;
-	h= hapus->next;
-	delete hapus;
 	
 	t=h;
 	
