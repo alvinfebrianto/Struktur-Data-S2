@@ -34,7 +34,7 @@ int main() {
 	// Input nilai untuk variabel array
 	cout << "Masukkan " << n << " elemen array: \n";
 	for (i = 0; i < n; i++) {
-    	cin >> array[i];
+    	    cin >> array[i];
 	}
 	
 	// Memanggil fungsi Bubble_Sort dengan memasukkan variabel array dan n
@@ -42,7 +42,7 @@ int main() {
 	// Menampilkan hasil pengurutan
 	cout << "\nHasil array yang sudah disorting adalah: \n";
 	for (i = 0; i < n; i++) {
-    	cout << "[" << array[i] << "] ";
+    	    cout << "[" << array[i] << "] ";
 	}
 	
 	getch();
