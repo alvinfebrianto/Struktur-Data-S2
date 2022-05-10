@@ -14,6 +14,7 @@ class TreeNode {
     left = NULL;
     right = NULL;
   }
+
   TreeNode(int v) {
     value = v;
     left = NULL;
@@ -37,7 +38,7 @@ class BST {
 
 // fungsi untuk menambahkan node baru
    void insertNode(TreeNode * new_node) {
-  	// jika root masih kosong
+    // jika root masih kosong
     if (root == NULL) {
       // pengalokasian memori dari node yang telah dibuat
       root = new_node;
