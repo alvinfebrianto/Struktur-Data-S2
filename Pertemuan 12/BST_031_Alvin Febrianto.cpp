@@ -42,23 +42,22 @@ class BST {
     if (root == NULL) {
       // pengalokasian memori dari node yang telah dibuat
       root = new_node;
-      cout << "Value Inserted as root node!" << endl;
+      cout << "Value inserted as root node!" << endl;
     } else {
       TreeNode * temp = root;
        while (temp != NULL) {
         if (new_node -> value == temp -> value) {
-          cout << "Value Already exist," <<
-            "Insert another value!" << endl;
+          cout << "Value already exist, insert another value!" << endl;
           return;
         } else if ((new_node -> value < temp -> value) && (temp -> left == NULL)) {
           temp -> left = new_node;
-          cout << "Value Inserted to the left!" << endl;
+          cout << "Value inserted to the left!" << endl;
           break;
         } else if (new_node -> value < temp -> value) {
           temp = temp -> left;
         } else if ((new_node -> value > temp -> value) && (temp -> right == NULL)) {
           temp -> right = new_node;
-          cout << "Value Inserted to the right!" << endl;
+          cout << "Value inserted to the right!" << endl;
           break;
         } else {
           temp = temp -> right;
@@ -66,25 +65,20 @@ class BST {
        }
       }
    }
-  	TreeNode* insertRecursive(TreeNode *r, TreeNode *new_node)
-	{
-		if(r==NULL)
-		{
+  	TreeNode* insertRecursive(TreeNode *r, TreeNode *new_node) {
+		if(r==NULL) {
 			r=new_node;
 			cout <<"Insertion successful"<<endl;
 			return r;
 		}
 	
-		if(new_node->value < r->value)
-		{
+		if(new_node->value < r->value) {
 			r->left = insertRecursive(r->left,new_node);
 		}
-		else if (new_node->value > r->value)  
-		{
+		else if (new_node->value > r->value) {
 			r->right = insertRecursive(r->right,new_node);
 		}
-	   else
-	   {
+	   else {
 	     	cout << "No duplicate values allowed!" << endl;
 	     	return r; 
 		}
@@ -93,21 +87,21 @@ class BST {
 
   void print2D(TreeNode * r, int space) {
     // base case 1
-	if (r == NULL)
+    if (r == NULL)
       return;
     // memperluas jarak antara level 2
-	space += SPACE;
-	// proses anak kanan dulu 3
+    space += SPACE;
+    // proses anak kanan dulu 3
     print2D(r -> right, space);
     cout << endl;
     // 5
     for (int i = SPACE; i < space; i++)
       // 5.1
-	  cout << " ";
+      cout << " ";
     // 6
-	cout << r -> value << "\n";
+    cout << r -> value << "\n";
     // proses anak kiri 7
-	print2D(r -> left, space);
+    print2D(r -> left, space);
   }
 
   // simpul saat ini, kiri, kanan
@@ -200,7 +194,7 @@ class BST {
     else if (level == 0)
       cout << r -> value << " ";
     // level > 0
-	else
+    else
     {
       printGivenLevel(r -> left, level - 1);
       printGivenLevel(r -> right, level - 1);
